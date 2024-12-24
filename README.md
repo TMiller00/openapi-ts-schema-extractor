@@ -18,8 +18,8 @@ A CLI tool built with Deno that generates TypeScript type definitions from compo
 
 ```bash
 # Clone the repository
-git clone [your-repo-url]
-cd [your-repo-name]
+git clone TMiller00/openapi-ts-schema-extractor
+cd openapi-ts-schema-extractor
 ```
 
 ## Usage
@@ -31,7 +31,13 @@ deno run --allow-read --allow-write main.ts -i ./input.ts -o ./types/generated.t
 
 Watch mode:
 ```bash
-deno run --allow-read --allow-write main.ts -i ./input.ts -o ./types/generated.ts --watch
+deno run --watch --allow-read --allow-write main.ts -i ./input.ts -o ./types/generated.ts
+```
+
+Compile and run:
+```bash
+deno compile --allow-read --allow-write main.ts
+./openapi-ts-schema-extractor --w -i ./input.ts -o ./types/generated.ts
 ```
 
 ### CLI Options
