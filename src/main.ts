@@ -26,10 +26,8 @@ async function generateSchemaTypes(options: GeneratorOptions) {
 
 async function watchMode(options: GeneratorOptions) {
   console.log(`Watching ${options.input} for changes...`);
-
   const watcher = Deno.watchFs(options.input);
 
-  // Initial generation
   await generateSchemaTypes(options);
 
   for await (const event of watcher) {
