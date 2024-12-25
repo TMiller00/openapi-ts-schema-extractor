@@ -26,12 +26,12 @@ cd openapi-ts-schema-extractor
 
 Basic usage:
 ```bash
-deno run --allow-read --allow-write main.ts -i ./input.ts -o ./types/generated.ts
+deno run dev -i ./input.ts -o ./types/generated.ts
 ```
 
 Watch mode:
 ```bash
-deno run --watch --allow-read --allow-write main.ts -i ./input.ts -o ./types/generated.ts
+deno run dev -i ./input.ts -o ./types/generated.ts
 ```
 
 Compile and run:
