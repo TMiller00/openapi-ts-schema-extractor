@@ -53,7 +53,7 @@ deno compile --allow-read --allow-write main.ts
 Given an input file with a components interface:
 
 ```typescript
-interface components {
+export interface components {
   schemas: {
     User: {
       id: string;
@@ -86,13 +86,6 @@ export type Post = Schema<'Post'>;
 - `reader.ts`: Handles file reading and TS-Morph setup
 - `parser.ts`: Parses the TypeScript AST to extract schema types
 - `writer.ts`: Generates and writes the output type definitions
-
-## Development
-
-To run tests:
-```bash
-deno test
-```
 
 ## License
 
